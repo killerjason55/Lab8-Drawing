@@ -8,6 +8,7 @@ class Hanoi(object):
         self.destinationp = Pole(destination,300,0)
         self.startp.showpole()
         self.workspacep.showpole()
+        self.destinationp.showpole()
         for i in range(n):
             self.startp.pushdisk(Disk("d"+str(i),0,i*150,20,(n-1)*30))
 
@@ -25,7 +26,7 @@ class Hanoi(object):
             self.move_tower(n-1,w,d,s)
 
     def solve(self):
-        self.move_tower(3,self.startp,self.destination,self.workspacep)
+        self.move_tower(3,self.startp,self.destinationp,self.workspacep)
 
 h = Hanoi()
 h.solve()
