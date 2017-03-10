@@ -1,5 +1,7 @@
+from turtle import *
 class Pole():
-    def init(name, stack = [], toppos = 0, xpos = 0, ypos = 0, thickness = 30, length = 120, color = 'white'):
+    def __init__(self, name, stack = [], toppos = 0, xpos = 0, ypos = 0, thickness = 30, length = 120, color = 'white'):
+
         self.name = name
         self.stack = stack
         self.top = toppos
@@ -26,4 +28,5 @@ class Pole():
 
     def popdisk(self):
         last_disk = self.stack.pop()
+        self.top -= last_disk.h
         return last_disk
