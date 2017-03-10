@@ -32,7 +32,7 @@ class Simple_drawing_window2(QWidget):
 if __name__ == "__main__":
     app = QApplication(sys.argv)
 
-    a = Simple_drawing_window1()
+    a = Simple_drawing_window2()
 
     a.show()
 
