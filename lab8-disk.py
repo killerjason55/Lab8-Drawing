@@ -27,8 +27,22 @@ class Disk:
         goto(x,y)
 
 
-    def cleardisk():
-        pass
+    def cleardisk(self):
+        begin_fill()
+        color("white")
+        fd(self.w/2)
+        left(90)
+        fd(self.h)
+        left(90)
+        fd(self.w)
+        left(90)
+        fd(self.h)
+        left(90)
+        fd(self.w/2)
+        
+        end_fill()
+        color("black")
 
 a=Disk("test",0,0,10,40,"red")
 a.showdisk()
+a.cleardisk()
