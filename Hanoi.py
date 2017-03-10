@@ -1,4 +1,5 @@
 from lab8_3 import Pole
+from lab8_disk import Disk
 
 class Hanoi(object):
     def __init__(self,n=3,start="A",workspace="B",destination="C"):
