@@ -1,5 +1,4 @@
-from turtle import *
-class Pole:
+class Pole():
     def init(name, stack = [], toppos = 0, xpos = 0, ypos = 0, thickness = 30, length = 120, color = 'white'):
         self.name = name
         self.stack = stack
@@ -15,15 +14,16 @@ class Pole:
         goto(self.posx, self.posy)
         pd()
         heading(90)
-        for i in range 2:
+        for i in range(2):
             forward(self.thick / 2)
             left(90)
             forward(length)
             left(90)
             forward(self.thick / 2)
 
-    def pushdisk(disk):
-        pass
+    def pushdisk(self, Disk):
+        self.stack.append(Disk)
 
-    def popdisk():
-        pass
+    def popdisk(self):
+        last_disk = self.stack.pop()
+        return last_disk
