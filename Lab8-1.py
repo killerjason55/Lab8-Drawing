@@ -22,7 +22,7 @@ class Simple_drawing_window(QWidget):
         p.setBrush(QColor(255,127,0))
         p.drawPie(50,150,100,100,0,180*16)
 
-        p.drawPolygon([
+        p.drawCircle([
             QPoint(50,200),QPoint(150,200),QPoint(100,400),
             ])
         p.drawImage(QRect(200,100,320,320),self.rabbit)
